@@ -2,7 +2,7 @@ import React from 'react'
 
 function Main() {
   return (
-    <div className="snap-start  h-[calc(100vh-100px)]  w-screen bg-[#00040E] flex" id='home' >
+    <div className="snap-start  h-[calc(100vh-100px)]  w-screen bg-black flex" id='home' >
       <div className='flex items-center justify-center  text-white  w-[50%]'>
         <div className='flex flex-col items-start justify-around w-[60%] h-[60%] select-none'>
           <h1 className='text-6xl font-bold'>Help For Ideal <span className='text-g font-f2'>Body</span>  Fitness</h1>
@@ -10,7 +10,7 @@ function Main() {
           <button className='h-12 w-40 text-white bg-g rounded text-l '><a href='#programs'>Get Started</a></button>
         </div>
       </div>
-      <div className="text-white text-white w-[50%] relative">
+      <div className="text-white w-[50%] relative">
         <div className='h-[100%] w-[100%] z-20 absolute ' >
           <img className='h-[100%] w-[100%] bottom-0 object-scale select-none' src="assets/men/m5.png " alt="/" />
         </div>
