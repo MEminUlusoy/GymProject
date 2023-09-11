@@ -23,6 +23,16 @@ module.exports = {
       colors:{
         "g": "#66B932",
       },
+
+      objectPosition: {
+        'center-top': 'center top',
+        'center-bottom': 'center bottom',
+      },
+
+      listStyleType: {
+        square: 'square',
+        roman: 'upper-roman',
+      },
     },
   },
   plugins: [

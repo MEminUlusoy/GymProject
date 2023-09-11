@@ -6,7 +6,7 @@ function Programs() {
       <div className=' h-[80%] w-[80%] grid grid-cols-7 grid-rows-2 gap-4 '>
 
         <div className='row-span-2 col-span-1 flex justify-center items-center '>
-          <h1 className='text-5xl tracking-tight text-black font-bold  rotate-180' style={{ writingMode: 'vertical-rl' }}><span className='text-[#158009]'>Our</span> Programs</h1>
+          <h1 className='text-6xl tracking-tight text-black font-bold  rotate-180' style={{ writingMode: 'vertical-rl' }}><span className='text-[#158009]'>Our</span> Programs</h1>
         </div>
 
         {/* Daily Workout Programs */}
@@ -17,7 +17,7 @@ function Programs() {
           </div>
           <div className='flex w-[60%] h-[100%] flex-col justify-center '>
             <h4 className='text-2xl text-black tracking-tight font-f2'>Daily Workout Programs</h4>
-            <p className='text-[#A4A6A6] my-[20px]'>Get in shape with our pro trainers.Reach your body goals in no time contact us. </p>
+            <p className='text-[#A4A6A6] my-[30px] '>Get in shape with our pro trainers. Reach your body goals in no time contact us. </p>
             <div className='flex'>
               <a className='text-[#158009] font-bold' href="/">Join now</a>
               <i className="fa-solid fa-arrow-right-long text-[#158009] -rotate-45 text-xs ml-2"></i>
@@ -32,7 +32,7 @@ function Programs() {
           </div>
           <div className='flex w-[60%] h-[100%] flex-col justify-center '>
             <h4 className='text-2xl text-black tracking-tight font-f2'>Weekly Workout Programs</h4>
-            <p className='text-[#A4A6A6] my-[20px]'>Get in shape with our pro trainers.Reach your body goals in no time contact us. </p>
+            <p className='text-[#A4A6A6] my-[30px]'>Get in shape with our pro trainers.Reach your body goals in no time contact us. </p>
             <div className='flex'>
               <a className='text-[#158009] font-bold' href="/">Join now</a>
               <i className="fa-solid fa-arrow-right-long text-[#158009] -rotate-45 text-xs ml-2"></i>
@@ -47,7 +47,7 @@ function Programs() {
           </div>
           <div className='flex w-[60%] h-[100%] flex-col justify-center '>
             <h4 className='text-2xl text-black tracking-tight font-f2'>Women Workout Programs</h4>
-            <p className='text-[#A4A6A6] my-[20px]'>Get in shape with our pro trainers.Reach your body goals in no time contact us. </p>
+            <p className='text-[#A4A6A6] my-[30px]'>Get in shape with our pro trainers.Reach your body goals in no time contact us. </p>
             <div className='flex'>
               <a className='text-[#158009] font-bold' href="/">Join now</a>
               <i className="fa-solid fa-arrow-right-long text-[#158009] -rotate-45 text-xs ml-2"></i>
@@ -62,7 +62,7 @@ function Programs() {
           </div>
           <div className='flex w-[60%] flex-col justify-center '>
             <h4 className='text-2xl text-black tracking-tight font-f2'>Couple Workout Programs</h4>
-            <p className='text-[#A4A6A6] my-[20px]'>Get in shape with our pro trainers.Reach your body goals in no time contact us. </p>
+            <p className='text-[#A4A6A6] my-[30px]'>Get in shape with our pro trainers.Reach your body goals in no time contact us. </p>
             <div className='flex'>
               <a className='text-[#158009] font-bold' href="/">Join now</a>
               <i className="fa-solid fa-arrow-right-long text-[#158009] -rotate-45 text-xs ml-2"></i>
