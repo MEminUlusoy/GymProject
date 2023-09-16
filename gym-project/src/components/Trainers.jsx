@@ -31,28 +31,28 @@ function Trainers() {
                 <div className='flex items-center justify-center h-2/5'>
                   <img className='h-full w-3/4 object-cover rounded-full' src={image} alt="/" />
                 </div>
-                <div className='h-2/5'>
+                <div className='h-2/5 p-5'>
                   <table className=''>
-                    <tr className='my-4'>
-                      <td className='text-g font-f4 text-xl '>Name: </td>
-                      <td className='text-white font-f4 text-lg '>{name}</td>
+                    <tr className=''>
+                      <td className='text-g font-f4 text-lg py-3 '>Name: </td>
+                      <td className='text-white font-f4 text-lg pl-4  py-3'>{name}</td>
                     </tr>
-                    <tr className='my-4'>
-                      <td className='text-g font-f4 text-xl '>Age: </td>
-                      <td className='text-white font-f4 text-lg '>{age}</td>
+                    <tr className=''>
+                      <td className='text-g font-f4 text-lg py-3 '>Age: </td>
+                      <td className='text-white font-f4 text-lg  pl-4 py-3'>{age}</td>
                     </tr>
-                    <tr className='my-4'>
-                      <td className='text-g font-f4 text-xl '>Job: </td>
-                      <td className='text-white font-f4 text-lg '>{job}</td>
+                    <tr className=''>
+                      <td className='text-g font-f4 text-lg py-3  '>Job: </td>
+                      <td className='text-white font-f4 text-lg pl-4  py-3'>{job}</td>
                     </tr>
-                    <tr className='my-4'>
-                      <td className='text-g font-f4 text-xl '>Description: </td>
-                      <td className='text-white font-f4 text-lg '>{desc}</td>
+                    <tr className=''>
+                      <td className='text-g font-f4 text-lg  py-3 flex items-start'>Description: </td>
+                      <td className='text-white font-f4 text-lg pl-4 py-3 text-align'>{desc}</td>
                     </tr>
                   </table>
                 </div>
                 <div className='h-1/5 flex items-center justify-center'>
-                  <button className='bg-g h-16 w-40 text-white rounded-md cursor-pointer'>Take Courses</button>
+                  <button className='group mb-2 flex items-center justify-around bg-g h-16 w-48 text-lg text-white rounded-md cursor-pointer font-bold font-f4 transform hover:translate-x-5 transition-all duration-300 ease-in'>Take Courses <span className='hidden group-hover:block'><i className="fa-solid fa-arrow-right-long"></i></span></button>
                 </div>
               </div>
             );
@@ -64,28 +64,28 @@ function Trainers() {
             <div className='flex items-center justify-center h-2/5 '>
               <img className='h-full w-3/4 object-cover rounded-full' src="assets/trainer/t3.jpg" alt="/" />
             </div>
-            <div className=' h-2/5'>
+            <div className=' h-2/5 p-5'>
               <table className=''>
                 <tr className='my-4'>
-                  <td className='text-g font-f4 text-xl '>Name: </td>
-                  <td className='text-white font-f4 text-lg '>Daisie Watts</td>
+                  <td className='text-g  font-f4 text-lg py-3 '>Name: </td>
+                  <td className='text-white font-f4 text-lg pl-4  py-3 '>Daisie Watts</td>
                 </tr>
                 <tr className='my-4'>
-                  <td className='text-g font-f4 text-xl '>Age: </td>
-                  <td className='text-white font-f4 text-lg '>32</td>
+                  <td className='text-g  font-f4 text-lg py-3 '>Age: </td>
+                  <td className='text-white font-f4 text-lg pl-4  py-3 '>34</td>
                 </tr>
                 <tr className='my-4'>
-                  <td className='text-g font-f4 text-xl '>Job: </td>
-                  <td className='text-white font-f4 text-lg '>Fitness Trainer</td>
+                  <td className='text-g  font-f4 text-lg py-3 '>Job: </td>
+                  <td className='text-white font-f4 text-lg pl-4  py-3 '>Fitness Trainer</td>
                 </tr>
                 <tr className='my-4'>
-                  <td className='text-g font-f4 text-xl '>Description: </td>
-                  <td className='text-white font-f4 text-lg '>Daisie ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus consequuntur eos, odio neque reiciendis pariatur eligendi magnam officia dolore!</td>
+                  <td className='text-g font-f4 text-lg  py-3 flex items-start '>Description: </td>
+                  <td className='text-white font-f4 text-lg pl-4 py-3 text-align '>Daisie Watts graduated Faculty of Sport at University of Munster. After she graduated, She deals with different sports. She also give many group lessons. She loves her job.</td>
                 </tr>
               </table>
             </div>
             <div className='h-1/5 flex items-center justify-center'>
-              <button className='bg-g h-16 w-40 text-white rounded-md cursor-pointer'>Take Courses</button>
+            <button className='group mb-2 flex items-center justify-around bg-g h-16 w-48 text-lg text-white rounded-md cursor-pointer font-bold font-f4 transform hover:translate-x-5 transition-all duration-300 ease-in'>Take Courses <span className='hidden group-hover:block'><i className="fa-solid fa-arrow-right-long"></i></span></button>
             </div>
           </div>
 
@@ -94,7 +94,9 @@ function Trainers() {
         <div className='h-1/2 bg-white w-full  relative flex items-end'>
           <img className='w-full h-full object-scale-down absolute z-20 ' src="assets/women/w12.png" alt="/" />
           <div className='h-full w-full  absolute z-10 flex items-center justify-center  text-g'>
-            <h1 className='font-bold font-f5  text-8xl text-align'>Are You Ready For <br /> Personal Trainer ?</h1>
+            <div className='w-1/2 h-full flex items-center justify-center '><h1 className='font-bold font-f5 tracking-widest  text-8xl text-align'>Do You <br />Personal</h1></div>
+            <div className='w-1/2 h-full flex items-center justify-center'><h1 className='font-bold font-f5 tracking-widest ml-44 text-8xl text-align'>Need A Trainer ?</h1></div>
+            
           </div>
         </div>
         <div className='h-1/2 w-3/4  bg-g rounded-md'>
@@ -103,7 +105,7 @@ function Trainers() {
 
               {
                 data.map((item) => {
-                  const { id, name, job, image, age, desc } = item;
+                  const { id, name, job, image } = item;
                   return (
                     /* Flip-Card */
                     <div key={id} className='flip-card h-3/4  w-[250px]  ml-[35px] mr-[35px]  flex flex-col flex-shrink-0 '>
@@ -124,9 +126,9 @@ function Trainers() {
                         {/* Flip-Card-BACK */}
                         <div className='flip-card-back h-full w-full bg-white flex flex-col items-center justify-evenly rounded-md'>
                           <p className='text-black text-bold font-f5 text-2xl text-center'>Learn More About <br /><span className='text-g text-lg'>{name}</span> </p>
-                          <button onClick={() => setInfo([item])} className='bg-black text-white  text-bold font-f2 text-lg h-16 w-40 rounded '>Details</button>
+                          <button onClick={() => setInfo([item])} className='button1'>Details</button>
                         </div>
-
+                        {/* bg-black text-white  text-bold font-f2 text-lg h-16 w-40 rounded  */}
                       </div>
 
                     </div>
