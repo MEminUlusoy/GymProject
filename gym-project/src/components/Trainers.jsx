@@ -94,7 +94,7 @@ function Trainers() {
         <div className='h-1/2 bg-white w-full  relative flex items-end'>
           <img className='w-full h-full object-scale-down absolute z-20 ' src="assets/women/w12.png" alt="/" />
           <div className='h-full w-full  absolute z-10 flex items-center justify-center  text-g'>
-            <div className='w-1/2 h-full flex items-center justify-center '><h1 className='font-bold font-f5 tracking-widest  text-8xl text-align'>Do You <br />Personal</h1></div>
+            <div className='w-1/2 h-full flex items-center justify-center '><h1 className='font-bold font-f5 tracking-widest ml-16  text-8xl text-align'>Do You <br />Personal</h1></div>
             <div className='w-1/2 h-full flex items-center justify-center'><h1 className='font-bold font-f5 tracking-widest ml-44 text-8xl text-align'>Need A Trainer ?</h1></div>
             
           </div>
