@@ -13,7 +13,7 @@ function Navbar() {
           <li><a href="#programs">Program</a></li>
           <li><a href="#groups">Groups</a></li>
           <li><a href="#trainers">Trainers</a></li>
-          <li><a href="#membership">Memebership</a></li>
+          <li><a href="#membership">Membership</a></li>
           <li className="border-r pr-5"><a href="#about">About</a></li>
           <li><a href="#footer">Login</a></li>
           <li><a href="#footer"><button className="border-2 border-[#66B932] text-[#66B932] py-1 px-2">Sign Up</button></a></li>
