@@ -16,14 +16,14 @@ function Groups() {
             <button className='h-10 w-32 hover:bg-[#ceb008]  text-white font-bold font-f2 tracking-wider rounded-lg bg-[#ddc018] transition duration-150'>Review</button>
           </div>
           <div className='w-3/5 h-full '>
-            <img className='h-full w-full object-scale-down' src="assets/women/w9.png" alt="" />
+            <img className='h-full w-full object-scale-down' src="assets/women/w9.png" alt="" loading='lazy'/>
           </div>
         </div>
       </div>
       <div className='group hover:bg-[#FFDE17] h-1/3 w-full flex justify-center transition duration-500 ease-in '>
         <div className='bg-[#FFDE17] h-full w-2/4 flex justify-evenly group-hover:translate-x-40 transition duration-500 ease-in '>
           <div className='w-2/5 h-full '>
-            <img className=' object-[center_top] h-full w-full object-cover ' src="assets/women/w16.png" alt="" />
+            <img className=' object-[center_top] h-full w-full object-cover ' src="assets/women/w16.png" alt="" loading='lazy' />
           </div>
           <div className='w-2/5 h-full flex flex-col justify-evenly items-center '>
             <h3 className='text-red-500 text-4xl font-f7 font-bold text-center'>Crossfit Groups</h3>
@@ -44,7 +44,7 @@ function Groups() {
             <button className='h-10 w-32 bg-white text-black font-bold font-f2 tracking-wider rounded-lg hover:bg-black hover:text-white transition duration-150 ease-in'>Review</button>
           </div>
           <div className='w-2/5 h-full '>
-            <img className='h-full w-full object-scale-down' src="assets/women/w13.png" alt="" />
+            <img className='h-full w-full object-scale-down' src="assets/women/w13.png" alt=""  loading='lazy'/>
           </div>
         </div>
       </div>

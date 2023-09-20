@@ -14,7 +14,7 @@ function Membership() {
           </div> */}
           <div className='h-full w-full flex items-center justify-center absolute group-hover/Silver:h-[10%]  transition-all duration-300 ease-in'>
             <h1 className='group-hover/Silver:text-3xl absolute z-30 text-center font-bold font-f5 text-7xl text-white'><span className='text-white font-f5 mr-3 group-hover/Silver:mr-0 '>Silver </span>  Membership </h1>
-            <img className='group-hover/Silver:hidden h-3/4 w-full object-cover absolute z-20 bottom-0 opacity-20' src="assets/women/w10.png" alt="" />
+            <img className='group-hover/Silver:hidden h-3/4 w-full object-cover absolute z-20 bottom-0 opacity-20' src="assets/women/w10.png" alt=""  loading='lazy'/>
             <div className='absolute h-full w-full z-10 bg-gradient-to-br from-zinc-400 opacity-50'></div>
           </div>
           <div className='group-hover/Silver:top-[10%] top-full left-0 w-full h-full bg-gradient-to-br from-zinc-400 to-zinc-300 absolute transition-all duration-300 ease-in'>
@@ -59,7 +59,7 @@ function Membership() {
 
           <div className='h-full w-full flex items-center justify-center absolute group-hover/Gold:h-[10%] transition-all duration-300 ease-in'>
             <h1 className='group-hover/Gold:text-3xl absolute z-30 text-center font-bold font-f5 text-7xl text-white'><span className='text-white font-f5 mr-3 group-hover/Gold:mr-0 '>Gold </span>  Membership </h1>
-            <img className='group-hover/Gold:hidden h-3/4 w-full object-cover absolute z-20 bottom-0 opacity-20' src="assets/women/w14.png" alt="" />
+            <img className='group-hover/Gold:hidden h-3/4 w-full object-cover absolute z-20 bottom-0 opacity-20' src="assets/women/w14.png" alt="" loading='lazy' />
             <div className=' absolute h-full w-full z-10 bg-gradient-to-t from-orange-400 to-yellow-500 opacity-50'></div>
           </div>
           <div className='group-hover/Gold:top-[10%]  top-full left-0 w-full h-full bg-gradient-to-t from-orange-400 to-yellow-500 absolute transition-all duration-300 ease-in'>
@@ -104,7 +104,7 @@ function Membership() {
 
           <div className='h-full w-full flex items-center justify-center absolute group-hover/Bronze:h-[10%] transition-all duration-300 ease-in'>
             <h1 className='group-hover/Bronze:text-3xl absolute z-30 text-center font-bold font-f5 text-7xl text-white'><span className='text-white font-f5 mr-3 group-hover/Bronze:mr-0 '>Bronze </span>  Membership </h1>
-            <img className=' group-hover/Bronze:hidden h-3/4 w-full object-cover absolute z-20 bottom-0 opacity-20' src="assets/others/o4.png" alt="" />
+            <img className=' group-hover/Bronze:hidden h-3/4 w-full object-cover absolute z-20 bottom-0 opacity-20' src="assets/others/o4.png" alt=""  loading='lazy'/>
             <div className='absolute h-full w-full z-10 bg-gradient-to-t from-amber-950 to-amber-800 opacity-50'></div>
           </div>
 
