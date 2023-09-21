@@ -4,7 +4,14 @@ import data from "./TrainersData";
 
 function Trainers() {
 
-  const [info, setInfo] = useState();
+  const [desc, setDesc] = useState([{
+    id: 1,
+    name: "Daisie Watts",
+    age: 34,
+    job: "Fitness Trainer",
+    image: "assets/trainer/t3.jpg",
+    desc: "Daisie Watts graduated Faculty of Sport at University of Munster. After she graduated, She deals with different sports. She also give many group lessons. She loves her job."
+  }]);
 
 
   const leftSlide = () => {
@@ -23,16 +30,17 @@ function Trainers() {
       {/* Personal Trainer General Info */}
 
       {
-        info ?
-          info.map((person) => {
-            const { id, name, job, image, age, desc } = person;
-            return (
-              <div key={id} className='w-1/4 h-full'>
-                <div className='flex items-center justify-center h-2/5'>
-                  <img className='h-full w-3/4 object-cover rounded-full' src={image} alt="/" />
-                </div>
-                <div className='h-2/5 p-5'>
-                  <table>
+
+        desc.map((person) => {
+          const { id, name, job, image, age, desc } = person;
+          return (
+            <div key={id} className='w-1/4 h-full'>
+              <div className='flex items-center justify-center h-2/5'>
+                <img className='h-full w-3/4 object-cover rounded-full' src={image} alt="/" />
+              </div>
+              <div className='h-2/5 p-5'>
+                <table>
+                  <tbody>
                     <tr>
                       <td className='text-g font-f4 text-lg py-3 '>Name: </td>
                       <td className='text-white font-f4 text-lg pl-4  py-3'>{name}</td>
@@ -49,45 +57,16 @@ function Trainers() {
                       <td className='text-g font-f4 text-lg  py-3 flex items-start'>Description: </td>
                       <td className='text-white font-f4 text-lg pl-4 py-3 text-align'>{desc}</td>
                     </tr>
-                  </table>
-                </div>
-                <div className='h-1/5 flex items-center justify-center'>
-                  <button className='group mb-2 flex items-center justify-around bg-g h-16 w-48 text-lg text-white rounded-md cursor-pointer font-bold font-f4 transform hover:translate-x-5 transition-all duration-300 ease-in'>Take Courses <span className='hidden group-hover:block'><i className="fa-solid fa-arrow-right-long"></i></span></button>
-                </div>
+                  </tbody>
+                </table>
+
               </div>
-            );
-          })
-
-          :
-
-          <div className='w-1/4 h-full'>
-            <div className='flex items-center justify-center h-2/5 '>
-              <img className='h-full w-3/4 object-cover rounded-full' src="assets/trainer/t3.jpg" alt="/" loading='lazy' />
+              <div className='h-1/5 flex items-center justify-center'>
+                <button className='group mb-2 flex items-center justify-around bg-g h-16 w-48 text-lg text-white rounded-md cursor-pointer font-bold font-f4 transform hover:translate-x-5 transition-all duration-300 ease-in'>Take Courses <span className='hidden group-hover:block'><i className="fa-solid fa-arrow-right-long"></i></span></button>
+              </div>
             </div>
-            <div className=' h-2/5 p-5'>
-              <table className=''>
-                <tr className='my-4'>
-                  <td className='text-g  font-f4 text-lg py-3 '>Name: </td>
-                  <td className='text-white font-f4 text-lg pl-4  py-3 '>Daisie Watts</td>
-                </tr>
-                <tr className='my-4'>
-                  <td className='text-g  font-f4 text-lg py-3 '>Age: </td>
-                  <td className='text-white font-f4 text-lg pl-4  py-3 '>34</td>
-                </tr>
-                <tr className='my-4'>
-                  <td className='text-g  font-f4 text-lg py-3 '>Job: </td>
-                  <td className='text-white font-f4 text-lg pl-4  py-3 '>Fitness Trainer</td>
-                </tr>
-                <tr className='my-4'>
-                  <td className='text-g font-f4 text-lg  py-3 flex items-start '>Description: </td>
-                  <td className='text-white font-f4 text-lg pl-4 py-3 text-align '>Daisie Watts graduated Faculty of Sport at University of Munster. After she graduated, She deals with different sports. She also give many group lessons. She loves her job.</td>
-                </tr>
-              </table>
-            </div>
-            <div className='h-1/5 flex items-center justify-center'>
-            <button className='group mb-2 flex items-center justify-around bg-g h-16 w-48 text-lg text-white rounded-md cursor-pointer font-bold font-f4 transform hover:translate-x-5 transition-all duration-300 ease-in'>Take Courses <span className='hidden group-hover:block'><i className="fa-solid fa-arrow-right-long"></i></span></button>
-            </div>
-          </div>
+          );
+        })
 
       }
       <div className=' w-3/4 h-full flex flex-col bg-g items-center'>
@@ -96,7 +75,7 @@ function Trainers() {
           <div className='h-full w-full  absolute z-10 flex items-center justify-center  text-g'>
             <div className='w-1/2 h-full flex items-center justify-center '><h1 className='font-bold font-f5 tracking-widest ml-16  text-8xl text-align'>Do You <br />Personal</h1></div>
             <div className='w-1/2 h-full flex items-center justify-center'><h1 className='font-bold font-f5 tracking-widest ml-44 text-8xl text-align'>Need A Trainer ?</h1></div>
-            
+
           </div>
         </div>
         <div className='h-1/2 w-3/4  bg-g rounded-md'>
@@ -114,7 +93,7 @@ function Trainers() {
                         {/* Flip-Card-FRONT */}
                         <div className='flip-card-front h-full w-full bg-white rounded-md'>
                           <div className='h-4/6 w-full flex items-center justify-center p-2' >
-                            <img className='h-full w-full object-cover rounded-full' src={image} alt="/"  loading='lazy'/>
+                            <img className='h-full w-full object-cover rounded-full' src={image} alt="/" loading='lazy' />
                           </div>
                           <div className='flex  items-end justify-center h-1/6  '>
                             <h4 className='text-xl font-f2 font-bold' >{name}</h4>
@@ -126,7 +105,7 @@ function Trainers() {
                         {/* Flip-Card-BACK */}
                         <div className='flip-card-back h-full w-full bg-white flex flex-col items-center justify-evenly rounded-md'>
                           <p className='text-black text-bold font-f5 text-2xl text-center'>Learn More About <br /><span className='text-g text-lg'>{name}</span> </p>
-                          <button onClick={() => setInfo([item])} className='button1'>Details</button>
+                          <button onClick={() => setDesc([item])} className='button1'>Details</button>
                         </div>
                         {/* bg-black text-white  text-bold font-f2 text-lg h-16 w-40 rounded  */}
                       </div>
