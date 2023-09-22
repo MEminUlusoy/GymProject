@@ -39,10 +39,10 @@ function Footer() {
             <h1 className='text-white font-f4 text-3xl'>About Fitness</h1>
             <p className='text-white font-f4 text-md'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, culpa porro. Eos eaque laboriosam sunt laborum vel consequuntur doloribus? Asperiores odit reiciendis aut esse rerum deserunt. Iusto ducimus aliquam recusandae?</p>
             <div className='text-white flex justify-around w-40 h-16'>
-              <i class="fa-brands fa-twitter text-2xl cursor-pointer"></i>
-              <i class="fa-brands fa-facebook-f text-2xl cursor-pointer"></i>
-              <i class="fa-brands fa-instagram text-2xl cursor-pointer"></i>
-              <i class="fa-brands fa-github text-2xl cursor-pointer"></i>
+              <i className="fa-brands fa-twitter text-2xl cursor-pointer"></i>
+              <i className="fa-brands fa-facebook-f text-2xl cursor-pointer"></i>
+              <i className="fa-brands fa-instagram text-2xl cursor-pointer"></i>
+              <a href="https://github.com/MEminUlusoy"><i className="fa-brands fa-github text-2xl cursor-pointer"></i></a>
             </div> 
           </div>
       
