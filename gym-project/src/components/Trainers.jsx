@@ -17,11 +17,13 @@ function Trainers() {
   const leftSlide = () => {
     var slider = document.getElementById('slider');
     slider.scrollLeft = slider.scrollLeft - 500;
+    
   }
 
   const rightSlide = () => {
     var slider = document.getElementById('slider');
     slider.scrollLeft = slider.scrollLeft + 500;
+    console.log("ee");
   }
 
 
@@ -34,7 +36,7 @@ function Trainers() {
         desc.map((person) => {
           const { id, name, job, image, age, desc } = person;
           return (
-            <div key={id} className='w-1/4 h-full'>
+            <div key={id} className='lg:w-2/5 xl:w-1/4 h-full'>
               <div className='flex items-center justify-center h-2/5'>
                 <img className='h-full w-3/4 object-cover rounded-full' src={image} alt="/" />
               </div>
@@ -42,34 +44,34 @@ function Trainers() {
                 <table>
                   <tbody>
                     <tr>
-                      <td className='text-g font-f4 text-lg py-3 '>Name: </td>
-                      <td className='text-white font-f4 text-lg pl-4  py-3'>{name}</td>
+                      <td className='text-g font-f4 lg:text-base  xl:text-lg py-3 '>Name: </td>
+                      <td className='text-white font-f4 lg:text-sm xl:text-lg pl-4  py-3'>{name}</td>
                     </tr>
                     <tr>
-                      <td className='text-g font-f4 text-lg py-3 '>Age: </td>
-                      <td className='text-white font-f4 text-lg  pl-4 py-3'>{age}</td>
+                      <td className='text-g font-f4 lg:text-base  xl:text-lg py-3 '>Age: </td>
+                      <td className='text-white font-f4 lg:text-sm xl:text-lg  pl-4 py-3'>{age}</td>
                     </tr>
                     <tr>
-                      <td className='text-g font-f4 text-lg py-3  '>Job: </td>
-                      <td className='text-white font-f4 text-lg pl-4  py-3'>{job}</td>
+                      <td className='text-g font-f4 lg:text-base  xl:text-lg py-3  '>Job: </td>
+                      <td className='text-white font-f4 lg:text-sm xl:text-lg pl-4  py-3'>{job}</td>
                     </tr>
-                    <tr>
-                      <td className='text-g font-f4 text-lg  py-3 flex items-start'>Description: </td>
-                      <td className='text-white font-f4 text-lg pl-4 py-3 text-align'>{desc}</td>
+                    <tr className='  '>
+                      <td className='text-g font-f4 lg:text-base  xl:text-lg  py-3 flex items-start'>Description: </td>
+                      <td className='text-white font-f4 lg:text-sm xl:text-lg pl-4 py-3 text-align'>{desc}</td>
                     </tr>
                   </tbody>
                 </table>
 
               </div>
               <div className='h-1/5 flex items-center justify-center'>
-                <button className='group mb-2 flex items-center justify-around bg-g h-16 w-48 text-lg text-white rounded-md cursor-pointer font-bold font-f4 transform hover:translate-x-5 transition-all duration-300 ease-in'>Take Courses <span className='hidden group-hover:block'><i className="fa-solid fa-arrow-right-long"></i></span></button>
+                <button className='group lg:h-12 lg:w-40 lg:text-base xl:h-16 xl:w-48 xl:text-lg mb-2 flex items-center justify-around bg-g  text-white rounded-md cursor-pointer font-bold font-f4 transform hover:translate-x-5 transition-all duration-300 ease-in'>Take Courses <span className='hidden group-hover:block'><i className="fa-solid fa-arrow-right-long"></i></span></button>
               </div>
             </div>
           );
         })
 
       }
-      <div className=' w-3/4 h-full flex flex-col bg-g items-center'>
+      <div className=' lg:w-3/5 xl:w-3/4 h-full flex flex-col bg-g items-center'>
         <div className='h-1/2 bg-white w-full  relative flex items-end'>
           <img className='w-full h-full object-scale-down absolute z-20 ' src="assets/women/w12.png" alt="/" loading='lazy' />
           <div className='h-full w-full  absolute z-10 flex items-center justify-center  text-g'>
@@ -80,7 +82,7 @@ function Trainers() {
         </div>
         <div className='h-1/2 w-3/4  bg-g rounded-md'>
           <div className='relative h-full'>
-            <div id='slider' className='h-full   flex overflow-auto scroll-smooth scrollbar-hide items-center  px-6' >
+            <div id='slider' className='h-full w-full border-2   flex overflow-auto scroll-smooth scrollbar-hide items-center  px-6' >
 
               {
                 data.map((item) => {
@@ -120,8 +122,9 @@ function Trainers() {
 
             </div>
             <div className=''>
-              <div onClick={leftSlide} className='absolute top-1/2 -translate-y-1/2 h-16 w-16 flex items-center justify-center rounded-full bg-black left-5 cursor-pointer'><i className="fa-solid fa-angles-left text-white text-2xl"></i></div>
-              <div onClick={rightSlide} className='absolute top-1/2 -translate-y-1/2 h-16 w-16 flex items-center justify-center rounded-full bg-black right-5 cursor-pointer'><i className="fa-solid fa-angles-right text-white text-2xl"></i></div>
+              <div onClick={leftSlide} className='absolute z-40 top-1/2 -translate-y-1/2 h-16 w-16 flex items-center justify-center rounded-full bg-black left-5 hover:cursor-pointer'><i className="fa-solid fa-angles-left text-white text-2xl"></i></div>
+              <div onClick={rightSlide} className='absolute z-40 top-1/2 -translate-y-1/2 h-16 w-16 flex items-center justify-center rounded-full bg-black right-5 hover:cursor-pointer'><i className="fa-solid fa-angles-right text-white text-2xl "></i></div>
+              
             </div>
           </div>
         </div>
