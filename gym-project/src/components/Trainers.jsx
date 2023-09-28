@@ -17,7 +17,7 @@ function Trainers() {
   const leftSlide = () => {
     var slider = document.getElementById('slider');
     slider.scrollLeft = slider.scrollLeft - 500;
-    
+
   }
 
   const rightSlide = () => {
@@ -28,7 +28,7 @@ function Trainers() {
 
 
   return (
-    <div className="snap-start h-[calc(100vh-100px)] w-screen bg-black flex" id='trainers'>
+    <div className="snap-start h-[calc(100vh-100px)] w-screen bg-black lg:flex lg:flex-row md:flex md:flex-col" id='trainers'>
       {/* Personal Trainer General Info */}
 
       {
@@ -36,11 +36,11 @@ function Trainers() {
         desc.map((person) => {
           const { id, name, job, image, age, desc } = person;
           return (
-            <div key={id} className='lg:w-2/5 xl:w-1/4 h-full'>
-              <div className='flex items-center justify-center h-2/5'>
+            <div key={id} className='md:w-full md:h-1/2 md:flex lg:flex lg:flex-col lg:w-2/5 xl:w-1/4 lg:h-full'>
+              <div className='flex items-center justify-center md:w-2/5 md:h-3/4  lg:w-full lg:h-2/5  '>
                 <img className='h-full w-3/4 object-cover rounded-full' src={image} alt="/" />
               </div>
-              <div className='h-2/5 p-5'>
+              <div className='lg:h-2/5 lg:w-full lg:p-5 md:w-3/5 md:h-full md:px-5 '>
                 <table>
                   <tbody>
                     <tr>
@@ -63,37 +63,98 @@ function Trainers() {
                 </table>
 
               </div>
-              <div className='h-1/5 flex items-center justify-center'>
-                <button className='group lg:h-12 lg:w-40 lg:text-base xl:h-16 xl:w-48 xl:text-lg mb-2 flex items-center justify-around bg-g  text-white rounded-md cursor-pointer font-bold font-f4 transform hover:translate-x-5 transition-all duration-300 ease-in'>Take Courses <span className='hidden group-hover:block'><i className="fa-solid fa-arrow-right-long"></i></span></button>
+              <div className='md:hidden lg:h-1/5 lg:w-full  lg:flex items-center justify-center '>
+                <button className='group  lg:h-12 lg:w-40 lg:text-base xl:h-16 xl:w-48 xl:text-lg mb-2 flex items-center justify-around bg-g  text-white rounded-md cursor-pointer font-bold font-f4 transform hover:translate-x-5 transition-all duration-300 ease-in'>Take Courses <span className='hidden group-hover:block'><i className="fa-solid fa-arrow-right-long"></i></span></button>
               </div>
             </div>
+            // md:h-16 md:w-40 md:text-lg md:mb-2
           );
         })
 
       }
-      <div className=' lg:w-3/5 xl:w-3/4 h-full flex flex-col bg-g items-center'>
-        <div className='h-1/2 bg-white w-full  relative flex items-end'>
-          <img className='w-full h-full object-scale-down absolute z-20 ' src="assets/women/w12.png" alt="/" loading='lazy' />
-          <div className='h-full w-full  absolute z-10 flex items-center justify-center  text-g'>
-            <div className='w-1/2 h-full flex items-center justify-center '><h1 className='font-bold font-f5 tracking-widest ml-16  text-8xl text-align'>Do You <br />Personal</h1></div>
-            <div className='w-1/2 h-full flex items-center justify-center'><h1 className='font-bold font-f5 tracking-widest ml-44 text-8xl text-align'>Need A Trainer ?</h1></div>
+
+
+      {/*  !!!!! SADECE MD BOYUTUNDA ORTAYA ÇIKAN SLIDER KISMI !!!!!!!!!!!!!!! */}
+      {/*  !!!!!         BAŞLANGIÇ        !!!! */}
+      
+
+      <div className='md:block md:h-1/2 md:w-full lg:hidden  bg-g rounded-md '>
+        <div className='relative h-full'>
+          <div id='slider' className='h-full w-full flex overflow-auto scroll-smooth scrollbar-hide items-center  md:px-6' >
+
+            {
+              data.map((item) => {
+                const { id, name, job, image } = item;
+                return (
+                  /* Flip-Card */
+                  <div key={id} className='flip-card  md:h-3/4 md:w-[200px] md:ml-[21px] md:mr-[21px]   flex flex-col flex-shrink-0 '>
+                    {/* Flip-Card-Inner */}
+                    <div className='flip-card-inner w-full h-full '>
+                      {/* Flip-Card-FRONT */}
+                      <div className='flip-card-front h-full w-full bg-white rounded-md'>
+                        <div className='h-4/6 w-full flex items-center justify-center p-2' >
+                          <img className='h-full w-full object-cover rounded-full' src={image} alt="/" loading='lazy' />
+                        </div>
+                        <div className='flex  items-end justify-center h-1/6  '>
+                          <h4 className='text-xl font-f2 font-bold' >{name}</h4>
+                        </div>
+                        <div className='flex items-start justify-center h-1/6 text-gray-500  '>
+                          <p className='text-l font-f2'>{job}</p>
+                        </div>
+                      </div>
+                      {/* Flip-Card-BACK */}
+                      <div className='flip-card-back h-full w-full bg-white flex flex-col items-center justify-evenly rounded-md'>
+                        <p className='text-black text-bold font-f5  md:text-xl text-center'>Learn More About <br /><span className='text-g  md:text-base'>{name}</span> </p>
+                        <button onClick={() => setDesc([item])} className='button1'>Details</button>
+                      </div>
+                      
+                    </div>
+
+                  </div>
+
+                );
+              })
+            }
+          </div>
+          <div className=''>
+            <div onClick={leftSlide} className='md:absolute md:z-40 top-1/2 -translate-y-1/2 h-16 w-16 md:flex lg:hidden items-center justify-center rounded-full bg-black   md:left-5 hover:cursor-pointer'><i className="fa-solid fa-angles-left text-white text-2xl"></i></div>
+            <div onClick={rightSlide} className='md:absolute md:z-40 top-1/2 -translate-y-1/2 h-16 w-16 md:flex  lg:hidden items-center justify-center rounded-full bg-black  md:right-5 hover:cursor-pointer'><i className="fa-solid fa-angles-right text-white text-2xl "></i></div>
 
           </div>
         </div>
-        <div className='h-1/2 w-3/4  bg-g rounded-md'>
+      </div>
+
+
+      {/*  !!!!! SADECE MD BOYUTUNDA ORTAYA ÇIKAN SONU  !!!!!!!!!!!!!!! */}
+      {/*  !!!!!         YUKARISI SON        !!!! */}      
+
+
+
+
+      <div className='md:hidden lg:w-3/5 xl:w-3/4 h-full lg:flex lg:flex-col bg-g items-center'>
+        <div className='h-1/2 bg-white w-full  relative lg:flex items-end'>
+          <img className='w-full h-full object-scale-down absolute z-20 ' src="assets/women/w12.png" alt="/" loading='lazy' />
+          <div className='h-full w-full  absolute z-10 flex items-center justify-center  text-g'>
+            <div className='w-1/2 h-full flex items-center justify-center '><h1 className='font-bold font-f5 tracking-widest xl:ml-16 lg:ml-0  xl:text-8xl lg:text-5xl text-align'>Do You <br />Personal</h1></div>
+            <div className='w-1/2 h-full flex items-center justify-center'><h1 className='font-bold font-f5 tracking-widest xl:ml-44 lg:ml-24 xl:text-8xl lg:text-5xl  text-align'>Need A Trainer ?</h1></div>
+
+          </div>
+        </div>
+
+        <div className='lg:h-1/2 lg:w-3/4  bg-g rounded-md '>
           <div className='relative h-full'>
-            <div id='slider' className='h-full w-full border-2   flex overflow-auto scroll-smooth scrollbar-hide items-center  px-6' >
+            <div id='slider' className='h-full w-full flex overflow-auto scroll-smooth scrollbar-hide items-center  xl:px-6 lg:px-0' >
 
               {
                 data.map((item) => {
                   const { id, name, job, image } = item;
                   return (
                     /* Flip-Card */
-                    <div key={id} className='flip-card h-3/4  w-[250px]  ml-[35px] mr-[35px]  flex flex-col flex-shrink-0 '>
+                    <div key={id} className='flip-card xl:h-3/4 xl:w-[250px] xl:ml-[35px] xl:mr-[35px]  lg:h-3/4 lg:w-[180px] lg:ml-[15px] lg:mr-[15px]    flex flex-col flex-shrink-0 '>
                       {/* Flip-Card-Inner */}
                       <div className='flip-card-inner w-full h-full '>
                         {/* Flip-Card-FRONT */}
-                        <div className='flip-card-front h-full w-full bg-white rounded-md'>
+                        <div className='flip-card-front h-full w-full bg-white rounded50'>
                           <div className='h-4/6 w-full flex items-center justify-center p-2' >
                             <img className='h-full w-full object-cover rounded-full' src={image} alt="/" loading='lazy' />
                           </div>
@@ -106,10 +167,9 @@ function Trainers() {
                         </div>
                         {/* Flip-Card-BACK */}
                         <div className='flip-card-back h-full w-full bg-white flex flex-col items-center justify-evenly rounded-md'>
-                          <p className='text-black text-bold font-f5 text-2xl text-center'>Learn More About <br /><span className='text-g text-lg'>{name}</span> </p>
+                          <p className='text-black text-bold font-f5 xl:text-2xl lg:text-xl text-center'>Learn More About <br /><span className='text-g xl:text-lg lg:text-base'>{name}</span> </p>
                           <button onClick={() => setDesc([item])} className='button1'>Details</button>
                         </div>
-                        {/* bg-black text-white  text-bold font-f2 text-lg h-16 w-40 rounded  */}
                       </div>
 
                     </div>
@@ -122,16 +182,16 @@ function Trainers() {
 
             </div>
             <div className=''>
-              <div onClick={leftSlide} className='absolute z-40 top-1/2 -translate-y-1/2 h-16 w-16 flex items-center justify-center rounded-full bg-black left-5 hover:cursor-pointer'><i className="fa-solid fa-angles-left text-white text-2xl"></i></div>
-              <div onClick={rightSlide} className='absolute z-40 top-1/2 -translate-y-1/2 h-16 w-16 flex items-center justify-center rounded-full bg-black right-5 hover:cursor-pointer'><i className="fa-solid fa-angles-right text-white text-2xl "></i></div>
-              
+              <div onClick={leftSlide} className='lg:absolute lg:z-50 top-1/2 -translate-y-1/2 h-16 w-16 lg:flex items-center justify-center rounded-full bg-black xl:left-5 lg:left-0 hover:cursor-pointer'><i className="fa-solid fa-angles-left text-white text-2xl"></i></div>
+              <div onClick={rightSlide} className='lg:absolute lg:z-50 top-1/2 -translate-y-1/2 h-16 w-16 lg:flex items-center justify-center rounded-full bg-black xl:right-5  lg:right-0 hover:cursor-pointer'><i className="fa-solid fa-angles-right text-white text-2xl "></i></div>
+
             </div>
           </div>
         </div>
 
       </div>
     </div>
-  )
+  );
 }
 
-export default Trainers
+export default Trainers;
