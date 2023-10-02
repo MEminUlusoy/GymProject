@@ -6,7 +6,7 @@ function Navbar({rightNav,setRightNav}) {
 
   return (
     <div className='outter-div h-[100px] w-screen bg-black text-white z-40 top-0 fixed flex items-center justify-between px-[20px]  sm:px-[90px] lg:px-[100px] py-[30px] '>
-      <div className=""><a href="#home"><h1 className='font-orbitron text-[#66B932] text-[27px] font-Parisienne '>Ulusoy<span className='text-white'>Fit</span></h1></a></div>
+      <div className=""><a href="#home"><h1 className='font-orbitron text-[#66B932] text-[27px] font-Parisienne '>Ulusoy<span className='text-g'>Fit</span></h1></a></div>
       <div className=''>
         <div className='flex flex-col items-center justify-around lg:hidden'>
           <ul onClick={()=>setRightNav(!rightNav)} className={`space-y-2 cursor-pointer transition-all duration-300 ease-in ${rightNav && "translate-x-0 sm:translate-x-10 transition-all duration-300 ease-in"}`}>
