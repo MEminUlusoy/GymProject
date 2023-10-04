@@ -12,8 +12,8 @@ function About() {
         <div className='h-full w-full absolute flex'>
           <div className='w-1/2 h-full flex flex-col'>
             <div className='h-[45%] w-full flex flex-col items-center justify-end'>
-              <h1 className='text-g text-6xl font-f2 font-bold '>Who We Are ?</h1>
-              <p className='text-white text-xl font-f4  text-center px-24 mt-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cumque eveniet aliquid rem reprehenderit architecto alias deserunt beatae at sit culpa voluptas minus quas, ab aliquam, repudiandae ut cupiditate molestias! Culpa inventore eum iste esse adipisci possimus earum neque voluptates.</p>
+              <h1 className='text-g lg:text-6xl font-f2 font-bold '>Who We Are ?</h1>
+              <p className='text-white lg:text-xl font-f4  text-center px-24 mt-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cumque eveniet aliquid rem reprehenderit architecto alias deserunt beatae at sit culpa voluptas minus quas, ab aliquam, repudiandae ut cupiditate molestias! Culpa inventore eum iste esse adipisci possimus earum neque voluptates.</p>
             </div>
             <div className='h-[55%] w-full flex justify-center items-center'>
               <div className='h-3/4 w-full flex justify-center items-center relative'>
