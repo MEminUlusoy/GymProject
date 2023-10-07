@@ -18,13 +18,13 @@ function Trainers() {
   const leftSlide = () => {
     
     slider.current.scrollLeft = slider.current.scrollLeft - 500;
-    console.log("left");
+    
   }
 
   const rightSlide = () => {
     
     slider.current.scrollLeft = slider.current.scrollLeft + 500;
-    console.log("right");
+    
   }
 
 
